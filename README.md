@@ -8,8 +8,8 @@
     HTML
     CSS
     JS
-    Bootstrap Material Design 0.3.0
     Normalize.css 3.0.3
+    Bootstrap Material Design 0.3.0
     jQuery 1.4.4
     Raphaël 2.1.4
 
