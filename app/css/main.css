@@ -1,0 +1,46 @@
+/**********************
+ *  Project styles
+ **********************/
+/**
+ *  Bootstrap Material Styles
+ */
+.navbar .brand
+{
+	float:              none;
+
+	font-size:          28px;
+	text-align:         center;
+	line-height:        3;
+
+	margin:             0 0 0 -22px;
+
+	color:              #ffffff;
+	text-decoration:    none;
+}
+
+/**********************
+ *  Major Family Tree Manager styles
+ **********************/
+/**
+ *  IDs
+ */
+#details,
+#add,
+#edit,
+#data
+{
+	display:            none;
+}
+/**
+ *  Classes
+ */
+.container__manager_panel,
+.container__canvas
+{
+	padding:            0 40px 0 40px;
+}
+
+.aside__text_decoration
+{
+	font-size:          12px;
+}
