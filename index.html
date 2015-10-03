@@ -15,8 +15,9 @@
 
 
 		<!-- BEGIN Import Vendors Styles -->
-			<link rel="stylesheet"  href="bower_components/normalize-css/normalize.css" />
-			<link rel="stylesheet"  href="bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css" />
+			<link rel="stylesheet"  href="app/css/vendors/normalize-css/normalize.css" />
+			<link rel="stylesheet"  href="app/css/vendors/bootstrap-material-design/css/material-fullpalette.min.css" />
+			<link rel="stylesheet"  href="app/css/vendors/bootstrap-material-design/css/roboto.min.css" />
 		<!-- END Import Vendors Styles -->
 
 		<!-- BEGIN Import Project Styles -->
@@ -29,50 +30,143 @@
 
 	<body>
 
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<!-- /.btn.btn-navbar -->
-
-					<a class="brand" href="index.html">
-						Simple Family Tree Manager
-					</a>
-					<!-- /.brand-->
-
-					<div class="nav-collapse">
-					</div>
-					<!-- /.nav-collapse -->
-
-				</div>
-				<!-- /.container -->
-			</div>
-			<!-- /.navbar-inner -->
-		</div>
-		<!-- /.navbar.navbar-fixed-top -->
-
-
-
-
 		<div class="container">
 
-			<div class="row">
-				<div class="span12">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
 
-					<div class="span3">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+						<!-- /.btn.btn-navbar -->
+
+						<a class="brand"
+						   href="index.html"
+							>
+							Simple Family Tree Manager
+						</a>
+						<!-- /.brand-->
 
 					</div>
-					<!-- /.span3 -->
-
+					<!-- /.container -->
 				</div>
-				<!-- /.span12 -->
+				<!-- /.navbar-inner -->
 			</div>
-			<!-- /.row -->
+			<!-- /.navbar.navbar-fixed-top -->
+
+
+
+
+			<div class="container container__manager_panel">
+
+				<form id="details">
+					<h2>
+						Enter your family members starting with the oldest ones.
+					</h2>
+
+					<aside class="aside__text_decoration text-danger">
+						<p>Attention!</p>
+						<p>If you refresh or update page - your data will be lost!</p>
+					</aside>
+					<!-- /.aside__text_decoration.text-danger -->
+
+
+					<input id="id"
+					       class="form-control"
+					       type="hidden"
+					       name="id"
+							/>
+					<!-- /#id.form-control -->
+
+					<input id="name"
+					       class="form-control"
+					       type="text"
+					       name="name"
+					       placeholder="Name of Person *"
+					       required
+							/>
+					<!--/#name.form-control -->
+
+					<input id="birth"
+					       type="date"
+					       name="birth"
+					       min="1700-01-01"
+					       placeholder="Date of birth *"
+					       required
+							/>
+					<!-- /#birth -->
+
+					<input id="death"
+					       type="date"
+					       name="death"
+					       min="1700-01-01"
+					       placeholder="Date of death"
+							/>
+					<!-- /#death -->
+
+					<select id="father">
+						<option id="optionTemplate">
+							Father
+						</option>
+						<!-- /#optionTemplate -->
+					</select>
+					<!-- /#father -->
+
+					<select id="mother">
+						<option>Mother</option>
+					</select>
+					<!-- /#mother -->
+
+					<input id="submit"
+					       class="btn btn-success"
+					       type="submit"
+					       name="submit"
+					       value="Save"
+							/>
+					<!-- /#submit.btn.btn-success -->
+
+					<button id="cancel"
+							class="btn btn-default">
+						Cancel
+					</button>
+					<!-- /#cancel.btn.btn-default -->
+
+				</form>
+				<!-- /form#details -->
+
+				<button id="add"
+				        class="btn btn-primary"
+						>
+					Add Person
+				</button>
+				<!-- /#add.btn.btn-primary -->
+
+				<button id="edit"
+				        class="btn btn-primary btn-material-deep-orange-500"
+						>
+					Edit Person
+				</button>
+				<!-- /#edit.btn.btn-primary.btn-material-deep-orange-500 -->
+
+				<button id="data"
+				        class="btn btn-primary btn-material-blue-grey-500"
+						>
+					Get Data Tree
+				</button>
+				<!-- /#data.btn.btn-primary.btn-material-blue-grey-500 -->
+
+			</div>
+			<!-- /.container.container__manager_panel -->
+
+			<div class="container container__canvas">
+				<div id="canvas">
+				</div>
+				<!-- /#canvas -->
+			</div>
+			<!-- /.container -->
 
 		</div>
 		<!-- /.container -->
@@ -81,8 +175,8 @@
 
 
 		<!-- BEGIN Import Vendors JavaScript Libraries -->
-			<script src="bower_components/jquery/dist/jquery.min.js"></script>
-			<script src="bower_components/raphael/raphael-min.js"></script>
+			<script src="app/js/vendors/jquery/jquery.js"></script>
+			<script src="app/js/vendors/raphael/raphael-min.js"></script>
 		<!-- END Import Vendors JavaScript Libraries -->
 
 		<!-- BEGIN Import Project JavaScript Application -->
