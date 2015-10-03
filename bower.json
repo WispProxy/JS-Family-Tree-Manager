@@ -1,0 +1,13 @@
+{
+  "name": "JS-Family-Tree-Manager",
+  "version": "0.0.1",
+  "homepage": "https://github.com/WispProxy/JS-Family-Tree-Manager",
+  "description": "This simple Family Tree Manager",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "raphael": "https://github.com/DmitryBaranovskiy/raphael.git",
+    "bootstrap-material-design": "~0.3.0",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
